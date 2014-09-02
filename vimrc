@@ -35,11 +35,6 @@ set path=/home/vaibhavc/vaiP4/ws1/main/TOT/usr.src/**
 if $CSCOPE_DB != ""
 	cs add $CSCOPE_DB
 endif
-"set tags=./tags;/
-"map <Left> <Nop>
-"map <Right> <Nop>
-"map <Up> <Nop>
-"map <Down> <Nop>
 " Uncomment the following to have Vim jump to the last position when                                                       
 " reopening a file
 if has("autocmd")
@@ -55,8 +50,7 @@ highlight LineNr ctermfg=grey
 "set cursorline
 "hi CursorLine   cterm=NONE ctermbg=DarkRed ctermfg=white guibg=darkred guifg=white
 set complete-=i  "autocomplete considers only the current file i.e. does not search in header files included in the code
-set guifont=Inconsolata\ for\ Powerline:h15
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
