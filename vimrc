@@ -1,3 +1,11 @@
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+if has("autocmd")
+  filetype plugin indent on
+endif
+
 set bs=2
 set modeline
 set ls=2
