@@ -1,11 +1,12 @@
-
+map <F2> :NERDTreeToggle<CR>
 call pathogen#infect()
 call pathogen#helptags()
 
 if has("autocmd")
   filetype plugin indent on
 endif
-
+set showmatch " highlight matching brace
+set wildmenu " visual autocomplete
 set bs=2
 set modeline
 set ls=2
@@ -17,6 +18,7 @@ set bg=dark             " works well with white-on-black scheme
 colorscheme desert      " colorscheme desert
 set hlsearch            " highlight what you search for
 set incsearch           " type-ahead-find
+nnoremap <F3> :nohlsearch<CR>
 set shiftwidth=4
 set tabstop=4
 set history=500
@@ -30,6 +32,7 @@ set visualbell t_vb=          " and don't make faces
 set copyindent                  " use existing indents for new indents
 set backup
 set backupdir=~/backup
+set writebackup               " revision control for backup
 filetype plugin on
 set path=/home/vaibhavc/vaiP4/ws1/main/TOT/usr.src/** 
 if $CSCOPE_DB != ""
@@ -56,3 +59,20 @@ set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+set tabstop=2       " The width of a TAB is set to 2.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+
+set shiftwidth=2    " Indents will have a width of 2 
+
+set softtabstop=2   " Sets the number of columns for a TAB
+
+set expandtab       " Expand TABs to spaces
+set autoindent
+
+"set runtimepath^=~/.vim/bundle/ag  "search code from VIM command line using the_silver_searcher (ag) command line utility 
